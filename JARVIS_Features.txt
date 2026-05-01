@@ -1,0 +1,111 @@
+J.A.R.V.I.S  v3  —  Full Feature List
+=======================================
+
+VOICE
+------
+- Wake word activation ("Jarvis") — only responds when name is spoken, like Alexa
+- Google Speech Recognition for voice input
+- Text-to-speech voice output (male voice via pyttsx3)
+- Follow-up listening — no need to say "Jarvis" again when it asks a question
+- Adjustable voice rate and volume
+
+PC CONTROL
+-----------
+- Open any installed app by name
+- Find files anywhere on the computer
+- Open files by name or full path
+- Full keyboard control — type text, press keys, send hotkeys, hold keys
+- Full mouse control — move, left/right click, double click, drag, scroll
+- Take screenshots (saved to Desktop)
+- Run shell/command prompt commands
+- Volume up, down, mute
+
+BROWSER & INTERNET
+-------------------
+- Open any URL in default browser
+- Google search
+- YouTube search
+- Play music on Spotify (opens app, searches, plays first result)
+- Play videos on YouTube (opens and clicks first result)
+- Live weather lookup — no API key needed (wttr.in)
+- Live news headlines — no API key needed (BBC RSS)
+- DuckDuckGo web search with AI summary
+- Fetch and summarize any webpage by URL
+
+SCREEN AWARENESS
+-----------------
+- Automatically captures screen before spatial commands (click, find, open, etc.)
+- Sends screenshot to Claude Vision to understand current screen context
+- Describe what is currently on screen
+- Find and click UI elements by description (e.g. "click the save button")
+- Context-aware responses based on what app is open and what is visible
+
+AI & CONVERSATION
+------------------
+- Powered by Claude (Anthropic API)
+- Full natural conversation — ask anything
+- Remembers conversation history within a session
+- Coding assistant — write, run, debug, explain code in any language
+- Answers questions, explains concepts, helps with tasks
+
+CODING ENGINE
+--------------
+- Write code in: Python, JavaScript, Bash, PowerShell, Batch, C, C++, Go, Ruby, Rust
+- Run code and show output instantly
+- Debug and fix broken code
+- Explain code line by line
+- Save code to file
+- Open code in VS Code, Notepad++, or Notepad
+- Install Python packages via pip by voice
+
+IMAGE GENERATION
+-----------------
+- Generate AI images from text descriptions
+- Uses Stable Diffusion locally (no key needed, ~4GB one-time download)
+- Falls back to labelled placeholder PNG if Stable Diffusion not installed
+- Auto-saves as PNG to Desktop\JARVIS_Images\
+- Auto-opens generated image in Windows Photos app
+- GPU accelerated if NVIDIA GPU present, works on CPU too
+
+LEARNING & MEMORY
+------------------
+- Record your actions (mouse clicks + keypresses) by voice or GUI button
+- 3-second countdown before recording starts so you're ready
+- AI analyzes recordings to understand the GOAL, not just the raw clicks
+- Converts raw coordinates into logical named steps
+- Writes adaptive strategy that works even if screen layout changes
+- Correct a skill by voice — "Jarvis, you opened Spotify wrong"
+- JARVIS asks what you did differently then permanently rewrites the skill
+- Skills improve every time you correct them
+- Custom voice commands — teach any phrase to trigger any action
+- Persistent memory saved to jarvis_memory.json
+- Remembers corrections across sessions
+
+GUI APP
+--------
+- Dark-theme control panel window (tkinter)
+- Activity tab with live log of everything JARVIS hears and does
+- Code tab with full editor, run button, output pane
+- Pause / Resume listening buttons
+- Record / Stop Recording buttons with countdown
+- Teach button — add custom voice commands via dialog
+- Run Skill button — execute any learned skill from GUI
+- Manual text input box — type commands instead of speaking
+- Auto-start checkbox — toggle Windows startup from GUI
+- Admin and API key status badges
+
+SYSTEM
+-------
+- Runs as Administrator (auto UAC elevation on launch)
+- Auto-registers to start with Windows on first run (registry)
+- Startup can be enabled/disabled by voice or GUI checkbox
+- Logs all activity to jarvis.log
+- Hides to background when window is closed (keeps running)
+- Say "Jarvis shut down" to fully exit
+
+SETUP
+------
+- setup.bat installs all dependencies automatically
+- run_jarvis.bat keeps window open on crash to show error messages
+- Works with Python 3.11 (recommended) on Windows 10/11
+- Requires Anthropic API key (set once via setx command)
