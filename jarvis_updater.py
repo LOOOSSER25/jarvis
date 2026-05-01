@@ -31,11 +31,11 @@ from datetime import datetime
 
 # Raw URL to your jarvis.py on GitHub
 # Example: "https://raw.githubusercontent.com/YourUsername/jarvis/main/jarvis.py"
-JARVIS_RAW_URL = "YOUR_GITHUB_RAW_URL_HERE"
+JARVIS_RAW_URL = "https://raw.githubusercontent.com/LOOOSSER25/jarvis/refs/heads/main/jarvis.py"
 
 # Raw URL to a version.txt file on GitHub (just contains a number like "3.1")
 # Example: "https://raw.githubusercontent.com/YourUsername/jarvis/main/version.txt"
-VERSION_URL    = "YOUR_VERSION_TXT_URL_HERE"
+VERSION_URL    = "https://raw.githubusercontent.com/LOOOSSER25/jarvis/refs/heads/main/version.txt"
 
 # ══════════════════════════════════════════════════════════════════════════════
 
